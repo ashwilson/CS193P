@@ -22,6 +22,7 @@
 		2D547EC017477254004E2B9B /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D547EBF17477254004E2B9B /* Card.m */; };
 		2D547EC61747775F004E2B9B /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D547EC51747775F004E2B9B /* PlayingCard.m */; };
 		2D85F9091750C5FE0092187F /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D85F9081750C5FE0092187F /* PlayingCardDeck.m */; };
+		2DB326E5180359DD001E2241 /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2DB326E4180359DD001E2241 /* todo.txt */; };
 		2DD5C3FD17CCB1FA00F96257 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD5C3FC17CCB1FA00F96257 /* CardMatchingGame.m */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		2D547EC51747775F004E2B9B /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCard.m; path = Model/PlayingCard.m; sourceTree = "<group>"; };
 		2D85F9071750C5FE0092187F /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCardDeck.h; path = Model/PlayingCardDeck.h; sourceTree = "<group>"; };
 		2D85F9081750C5FE0092187F /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardDeck.m; path = Model/PlayingCardDeck.m; sourceTree = "<group>"; };
+		2DB326E4180359DD001E2241 /* todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
 		2DD5C3FB17CCB1FA00F96257 /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingGame.h; path = Model/CardMatchingGame.h; sourceTree = "<group>"; };
 		2DD5C3FC17CCB1FA00F96257 /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingGame.m; path = Model/CardMatchingGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +105,7 @@
 				2D547EB21747707A004E2B9B /* CardGameViewController.h */,
 				2D547EB31747707A004E2B9B /* CardGameViewController.m */,
 				2D547E9E1747707A004E2B9B /* Supporting Files */,
+				2DB326E4180359DD001E2241 /* todo.txt */,
 			);
 			path = CardGame;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				2D547EAA1747707A004E2B9B /* Default.png in Resources */,
 				2D547EAC1747707A004E2B9B /* Default@2x.png in Resources */,
 				2D547EAE1747707A004E2B9B /* Default-568h@2x.png in Resources */,
+				2DB326E5180359DD001E2241 /* todo.txt in Resources */,
 				2D547EB11747707A004E2B9B /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
