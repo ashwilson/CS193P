@@ -65,4 +65,10 @@
 	[self updateUI];
 }
 
+- (IBAction)redealCards:(id)sender {
+	self.game = [self.game initWithCardCount:self.cardButtons.count usingDeck:[[PlayingCardDeck alloc] init]];
+	self.flipCount = 0;
+	[self updateUI];
+
+}
 @end
