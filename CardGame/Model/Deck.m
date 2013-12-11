@@ -10,7 +10,7 @@
 
 @interface Deck()
 
-@property (strong, nonatomic) NSMutableArray *cards;
+@property (strong, nonatomic) NSMutableArray *cards; // of Card
 
 @end
 
@@ -30,6 +30,11 @@
         [self.cards addObject:card];
     }
     
+}
+
+- (void)addCard:(Card *)card
+{
+	[self addCard:card atTop:NO];
 }
 
 - (Card *) drawRandomCard

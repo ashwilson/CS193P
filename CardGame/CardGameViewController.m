@@ -11,8 +11,6 @@
 #import "CardMatchingGame.h"
 
 @interface CardGameViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *flipLabel;
-@property (nonatomic) int flipCount;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (strong, nonatomic) CardMatchingGame *game;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
@@ -41,34 +39,36 @@
 {
 	for (UIButton *cardButton in self.cardButtons) {
 		Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
-		[cardButton setTitle:card.contents forState:UIControlStateSelected];
-		[cardButton setTitle:card.contents forState:UIControlStateSelected|UIControlStateDisabled];
-		cardButton.selected = card.isFaceUp;
-		cardButton.enabled = !card.isUnplayable;
-		cardButton.alpha = card.isUnplayable ? 0.3 : 1.0;
+		[cardButton setTitle:[self titleForCard:card] forState:UIControlStateNormal];
+		[cardButton setBackgroundImage:[self backgroundImageForCard:card] forState:UIControlStateNormal];
+		cardButton.enabled = !card.isMatched;
+		cardButton.alpha = card.isMatched ? 0.3 : 1.0;
 	}
 	self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
 	self.messageLabel.text = [NSString stringWithFormat:@"%@", self.game.matchMessage];
 }
 
-- (void) setFlipCount:(int)flipCount
+- (NSString *)titleForCard:(Card *)card
 {
-	_flipCount = flipCount;
-	self.flipLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
-	NSLog(@"flips updated to %d", self.flipCount);
+	return card.isChosen ? card.contents : @"";
+}
+
+- (UIImage *)backgroundImageForCard:(Card *)card
+{
+	return [UIImage imageNamed:card.isChosen ? @"cardfront" : @"cardback"];
 }
 
 - (IBAction)flipCard:(UIButton *)sender
 {
 	[self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
-	self.flipCount++;
 	[self updateUI];
 }
 
 - (IBAction)redealCards:(id)sender {
 	self.game = [self.game initWithCardCount:self.cardButtons.count usingDeck:[[PlayingCardDeck alloc] init]];
-	self.flipCount = 0;
 	[self updateUI];
 
+}
+- (IBAction)gameMode:(id)sender {
 }
 @end
